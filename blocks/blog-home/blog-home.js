@@ -60,13 +60,11 @@ export default async function decorate(block) {
     // eslint-disable-next-line
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
     let position = 0;
-    let eager = true;
-    sortBl.forEach((row,i) => {
+    const eager = true;
+    sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path)) {
-        if (position==0)
-          block.append(createCard(row, 'blog-card', position, eager));
-        else
-          block.append(createCard(row, 'blog-card', position, false));
+        if (position === 0) block.append(createCard(row, 'blog-card', position, eager));
+        else block.append(createCard(row, 'blog-card', position, false));
         position += 1;
       }
     });
