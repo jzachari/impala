@@ -301,16 +301,21 @@ header nav .mobile-nav-top {
   height: 100%;
 }
 
+header nav .mobile-nav a {
+  color: var(--text-white);
+  font-size: var(--heading-font-size-s);
+}
+
+header .mobile-nav .nav-hamburger > a {
+  flex-grow: 1;
+  text-align: center; 
+}
+
 header nav .mobile-nav>div:nth-child(2)>div {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-header nav .mobile-nav a {
-  color: var(--text-white);
-  font-size: var(--heading-font-size-s);
 }
 
 header nav .mobile-nav>div:nth-child(2) a {

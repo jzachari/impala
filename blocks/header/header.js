@@ -141,7 +141,8 @@ export default async function decorate(block) {
       closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
       const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
       mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
-      mobileNavTop.appendChild(closeButton);
+      const anchorElement = mobileNavTop.querySelector('a');
+      mobileNavTop.insertBefore(closeButton, anchorElement);
     }
 
     decorateIcons(nav);
