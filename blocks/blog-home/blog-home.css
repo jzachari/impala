@@ -150,7 +150,8 @@ margin-inline-start: 20px;
   }
 
   .blog-home[data-block-status="loaded"] > .blog-card picture {
-      flex-basis: 55%;
+    flex: 0 0 50%; 
+     max-width: 50%;;
   }
 
   .blog-home[data-block-status="loaded"] > .blog-card > .card-content {

@@ -2,7 +2,7 @@ import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 import { getViewsLoves } from '../recent-posts/recent-posts.js';
 
-function createCard(row, style, position) {
+function createCard(row, style, position, eager) {
   const breakpoints = [
     { media: '(min-width: 1200px)', width: '500' },
     { media: '(min-width: 800px)', width: '400' },
@@ -12,7 +12,7 @@ function createCard(row, style, position) {
   const card = document.createElement('div');
   if (style) card.classList.add(style);
   if (row.image && row.title) {
-    const optimisedPicture = createOptimizedPicture(row.image, row.description, false, breakpoints);
+    const optimisedPicture = createOptimizedPicture(row.image, row.description, eager, breakpoints);
     const imageNew = optimisedPicture.querySelector('img');
     imageNew.setAttribute('width', imageNew.width);
     imageNew.setAttribute('height', imageNew.height);
@@ -60,9 +60,11 @@ export default async function decorate(block) {
     // eslint-disable-next-line
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
     let position = 0;
+    const eager = true;
     sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path)) {
-        block.append(createCard(row, 'blog-card', position));
+        if (position === 0) block.append(createCard(row, 'blog-card', position, eager));
+        else block.append(createCard(row, 'blog-card', position, false));
         position += 1;
       }
     });
