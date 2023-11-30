@@ -44,7 +44,7 @@
 }
 
 /* title */
-.blog-cards-parent .card-content > h3 {
+.blog-cards-parent .card-content > h2 {
    font-family: 'Playfair Display', serif;
    font-size: 18px;
    line-height: 30px;
