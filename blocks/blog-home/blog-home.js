@@ -2,6 +2,7 @@ import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 import { getViewsLoves } from '../recent-posts/recent-posts.js';
 
+function createCard(row, style, position, eager) {
   const breakpoints = [
     { media: '(min-width: 1200px)', width: '500' },
     { media: '(min-width: 800px)', width: '400' },
