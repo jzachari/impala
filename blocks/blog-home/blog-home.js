@@ -14,6 +14,9 @@ function createCard(row, style, position, eager) {
   if (row.image && row.title) {
     const optimisedPicture = createOptimizedPicture(row.image, row.description, eager, breakpoints);
     const imageNew = optimisedPicture.querySelector('img');
+    console.log(imageNew);
+    console.log(imageNew.width);
+    console.log(imageNew.height);
     imageNew.setAttribute('width', imageNew.width);
     imageNew.setAttribute('height', imageNew.height);
     card.prepend(optimisedPicture);
