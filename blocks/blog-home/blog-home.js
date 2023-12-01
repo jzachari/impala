@@ -2,7 +2,46 @@ import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 import { getViewsLoves } from '../recent-posts/recent-posts.js';
 
+function loadFontFaceObserver() {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.js';
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+
+
 function createCard(row, style, position, eager) {
+
+// Usage example:
+loadFontFaceObserver().then(() => {
+  const fontsToLoad = [
+    'Playfair Display',
+    'Didot',
+    'Raleway',
+    'Roboto',
+    'Noto',
+    'sans-serif' // Default fallback
+  ];
+
+  // Create FontFaceObserver instances for each font
+  const fontObservers = fontsToLoad.map(font => new FontFaceObserver(font));
+
+  // Check loading status for each font
+  fontObservers.forEach(observer => {
+    observer.load().then(() => {
+      console.log(`${observer.family} loaded`);
+    }).catch(() => {
+      console.error(`${observer.family} failed to load`);
+    });
+  });
+}).catch(() => {
+  console.error('Failed to load FontFaceObserver');
+});
+
   const breakpoints = [
     { media: '(min-width: 1200px)', width: '500' },
     { media: '(min-width: 800px)', width: '400' },

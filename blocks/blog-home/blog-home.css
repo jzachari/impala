@@ -63,6 +63,12 @@
   color: var(--text-color);
 }
 
+@font-face {
+  font-family: "serif";
+  size-adjust: 200.741%;
+  src: local("Times");
+}
+
 .blog-home[data-block-status="loaded"] > .blog-card > .card-content:hover h5 {
   color: #705959;
 }
@@ -87,6 +93,7 @@
   padding: 0 0 30px;
   display: flex;
   margin-inline-start: 0;
+  height: 36px;
 }
 
 .blog-social .count {
