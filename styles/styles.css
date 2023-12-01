@@ -234,9 +234,6 @@ main img {
   width: 100%;
 }
 
-main {
-  padding: 64px 16px;
-}
 /*
 main .section {
   padding: 64px 16px;
@@ -248,6 +245,7 @@ main .section {
   }
 }
 */
+
 @media (min-width: 900px) {
   .section > div {
     max-width: 1200px;
