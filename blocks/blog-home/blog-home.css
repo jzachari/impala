@@ -144,23 +144,22 @@ width: 36px;
 }
 
 @media (max-width: 600px){
-  .blog-home .blog-card picture {
+  .blog-home[data-block-status="loaded"] .blog-card picture {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 78%; /* Adjust as needed for the aspect ratio */
+    padding-bottom: 78%; 
     overflow: hidden;
   }
-  .blog-home .blog-card picture {
+  .blog-home[data-block-status="loaded"] .blog-card picture {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .blog-home .blog-card .card-content {
-    /* Additional styles for your card content */
-    margin-top: 75%; /* Adjust as needed to create space between image and text */
+  .blog-home[data-block-status="loaded"] .blog-card .card-content {
+    margin-top: 75%; 
   }
 
 }
