@@ -63,9 +63,8 @@ export default async function decorate(block) {
     const eager = true;
     sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path)) {
-        /*if (position === 0) block.append(createCard(row, 'blog-card', position, eager));
-        else block.append(createCard(row, 'blog-card', position, false)); */
-        block.append(createCard(row, 'blog-card', position, false));
+        if (position === 0) block.append(createCard(row, 'blog-card', position, eager));
+        else block.append(createCard(row, 'blog-card', position, false));
         position += 1;
       }
     });
