@@ -338,7 +338,7 @@ main > .section > .default-content-wrapper > p {
 }
 
 .blog main .autoblog {
-  padding: 0px 32px 10px;
+  padding: 0 32px 10px;
 }
 
 .blog main .autoblog > div > div {
@@ -359,7 +359,6 @@ main > .section > .default-content-wrapper > p {
   font-family: 'GFS Didot', serif;
   font-style: italic;
 }
-
 
 .blog main .autoblog > div > div > div:not(:last-of-type)::after {
   content: "\2022";

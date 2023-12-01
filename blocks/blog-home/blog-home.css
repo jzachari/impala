@@ -64,7 +64,7 @@
 }
 
 @font-face {
-  font-family: "serif";
+  font-family: serif;
   src: local("Times");
 }
 
@@ -145,13 +145,6 @@ width: 36px;
 
 @media (max-width: 600px){
   .blog-home[data-block-status="loaded"] .blog-card picture {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 78%; 
-    overflow: hidden;
-  }
-  .blog-home[data-block-status="loaded"] .blog-card picture {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -161,7 +154,6 @@ width: 36px;
   .blog-home[data-block-status="loaded"] .blog-card .card-content {
     margin-top: 75%; 
   }
-
 }
 
 @media (min-width: 600px) {
