@@ -34,6 +34,7 @@
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
   --default-content-font-family: raleway, sans-serif;
+  
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -234,6 +235,7 @@ main img {
   width: 100%;
 }
 
+/*
 main .section {
   padding: 64px 16px;
 }
@@ -243,6 +245,7 @@ main .section {
     padding: 64px 32px;
   }
 }
+*/
 
 @media (min-width: 900px) {
   .section > div {
@@ -335,7 +338,7 @@ main > .section > .default-content-wrapper > p {
 }
 
 .blog main .autoblog {
-  padding: 64px 32px 10px;
+  padding: 0 32px 10px;
 }
 
 .blog main .autoblog > div > div {
@@ -356,7 +359,6 @@ main > .section > .default-content-wrapper > p {
   font-family: 'GFS Didot', serif;
   font-style: italic;
 }
-
 
 .blog main .autoblog > div > div > div:not(:last-of-type)::after {
   content: "\2022";

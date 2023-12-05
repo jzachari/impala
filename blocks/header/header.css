@@ -1,8 +1,12 @@
 /* header and nav layout */
 .header-wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+header .header{
   background-color: rgba(0 0 0);
   width: 100%;
-  z-index: 2;
   position: fixed;
 }
 
