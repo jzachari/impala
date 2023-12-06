@@ -2,10 +2,10 @@
 .header-wrapper {
   z-index: 2;
   position: relative;
+  background-color: rgba(0 0 0);
 }
 
 header .header{
-  background-color: rgba(0 0 0);
   width: 100%;
   position: fixed;
 }
