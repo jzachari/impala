@@ -67,8 +67,8 @@ function createCard(row, style) {
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
   getViewsLoves(row).then(
-    (recentArticle) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`; },
-    (error) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span></div>`; },
+    (recentArticle) => { cardContent.innerHTML = `<h2><a href="${row.path}">${row.title}</a></h2> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`; },
+    (error) => { cardContent.innerHTML = `<h2><a href="${row.path}">${row.title}</a></h2> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span></div>`; },
   );
   card.append(cardContent);
   return (card);
