@@ -33,6 +33,13 @@
   flex-direction: column;
 }
 
+.blog-card .blog-social .count img {
+  height: 19px;
+  width: 19px;
+  margin-right: 4px;
+  margin-inline-start: 10px;
+}
+
 .blog-home[data-block-status="loaded"]>.blog-card picture img {
   width: 100%;
 }
@@ -134,13 +141,6 @@
   border: none;
   /* stylelint-disable-next-line length-zero-no-unit */
   margin: 0px 0;
-}
-
-.blog-card .blog-social .count img {
-  height: 19px;
-  width: 19px;
-  margin-right: 4px;
-  margin-inline-start: 10px;
 }
 
 .blog-home[data-block-status="loaded"] .blog-card picture {
