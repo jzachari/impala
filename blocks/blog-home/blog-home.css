@@ -33,7 +33,7 @@
   flex-direction: column;
 }
 
-.blog-home[data-block-status="loaded"]>.blog-card img {
+.blog-home[data-block-status="loaded"]>.blog-card picture img {
   width: 100%;
 }
 
@@ -120,7 +120,7 @@
   color: #000;
   font-size: 12px;
   position: relative;
-  margin-inline-start: 100px;
+  margin-inline-start: 35%;
 }
 
 .loves-recent .button {
@@ -154,7 +154,7 @@
   margin-top: 75%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1140px) {
   .blog-home[data-block-status="loaded"]>.blog-card {
     position: relative;
     overflow: hidden;
@@ -170,7 +170,6 @@
   .blog-home-wrapper .blog-home[data-block-status="loaded"] .blog-card picture {
     flex: 0 0 45%;
     max-width: 50%;
-    ;
     position: unset;
     width: unset;
     height: unset;
@@ -178,7 +177,6 @@
   }
 
   .blog-home[data-block-status="loaded"] .blog-card>.card-content {
-    flex-basis: 45%;
     margin-left: 40px;
     margin-top: 30px;
     text-align: left;
@@ -189,7 +187,7 @@
   }
 
   .blog-card .blog-social .loves-recent {
-    margin-inline-start: 340px;
+    margin-inline-start: 65%;
   }
 
   .blog-home[data-block-status="loaded"]>.blog-card>.card-content>.blog-publishnread {
@@ -201,5 +199,11 @@
     position: relative;
     left: 10px;
   }
+}
 
+@media (min-width: 600px) and (max-width: 1139px) {
+  /* This will apply styles to screens wider than 600px but narrower than 1140px */
+  .blog-card .blog-social .loves-recent {
+    margin-inline-start: 65%;
+  }
 }
