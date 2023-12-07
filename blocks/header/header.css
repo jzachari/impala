@@ -5,7 +5,6 @@
 }
 
 header .header{
-  background-color: rgba(0 0 0);
   width: 100%;
   position: fixed;
 }
@@ -23,6 +22,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+  background-color: var(--nav-color);
 }
 
 header nav[aria-expanded="true"] {
@@ -31,12 +31,13 @@ header nav[aria-expanded="true"] {
     'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
-  min-height: 100vh;
+  background-color: var(--nav-color);
 }
 
 @media (min-width: 600px) {
   header nav {
     padding: 0 2rem;
+    background-color: var(--nav-color);
   }
 }
 
