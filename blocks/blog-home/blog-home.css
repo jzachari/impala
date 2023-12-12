@@ -91,6 +91,7 @@
   margin: 30px 0;
   padding: 0 0 30px;
   display: flex;
+  justify-content: space-between;
   margin-inline-start: 0;
   height: 36px;
 }
@@ -101,7 +102,7 @@
   color: #000;
   font-size: 12px;
   position: relative;
-  margin-inline-start: 20px;
+  margin-right: auto;
   width: 36px;
 }
 
@@ -111,7 +112,6 @@
   color: #000;
   font-size: 12px;
   position: relative;
-  margin-inline-start: 10px;
 }
 
 .blog-card .blog-social .loves-recent {
@@ -120,7 +120,7 @@
   color: #000;
   font-size: 12px;
   position: relative;
-  margin-inline-start: 100px;
+  margin-left: auto;
 }
 
 .loves-recent .button {
@@ -163,14 +163,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 30px;
-    height: 40vh;
+    margin-bottom: 80px;
   }
 
   .blog-home-wrapper .blog-home[data-block-status="loaded"] .blog-card picture {
     flex: 0 0 45%;
     max-width: 50%;
-    ;
     position: unset;
     width: unset;
     height: unset;
@@ -180,16 +178,12 @@
   .blog-home[data-block-status="loaded"] .blog-card>.card-content {
     flex-basis: 45%;
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 0;
     text-align: left;
   }
 
   .blog-home[data-block-status="loaded"]>.blog-card img {
     object-fit: cover;
-  }
-
-  .blog-card .blog-social .loves-recent {
-    margin-inline-start: 340px;
   }
 
   .blog-home[data-block-status="loaded"]>.blog-card>.card-content>.blog-publishnread {
