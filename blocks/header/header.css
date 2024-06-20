@@ -22,7 +22,7 @@ header nav {
   max-width: 1700px;
   height: var(--nav-height);
   padding: 0 1rem;
-  font-family: var(--body-font-family);
+  font-family: 'GFS Didot';
   background-color: var(--nav-color);
 }
 
